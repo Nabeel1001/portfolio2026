@@ -4,73 +4,70 @@ import personalInfo from "../../constants/personalInfo";
 import HeroStats from "./HeroStats";
 
 const HeroContent = () => {
-  return (
-    <div className="space-y-8">
+    return (
+        <div className="space-y-4">
 
-      {/* Greeting */}
-      <div className="space-y-3">
-        <p className="text-blue-500 font-semibold tracking-widest uppercase text-sm">
-          OPEN TO AI ENGINEER OPPORTUNITIES
-        </p>
+            {/* Greeting */}
+            <div className="space-y-3">
+                <div className="flex items-center gap-2 w-fit rounded-full border border-cyan-300 bg-white/90 px-4 py-2 backdrop-blur-sm shadow-sm mb-4">
+                    <span className="relative flex h-3 w-3">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75"></span>
+                        <span className="relative inline-flex h-3 w-3 rounded-full bg-cyan-500"></span>
+                    </span>
 
-        <h1 className="text-4xl lg:text-4xl font-black leading-tight">
-          Hi, I'm
-          <br />
+                    <p className="text-xs font-semibold tracking-[0.2em] text-cyan-600 uppercase">
+                        Open to AI Engineer Opportunities
+                    </p>
+                </div>
+                <p className="text-3xl lg:text-4xl font-bold text-gray-800 mb-0">
+                    Hi, I'm
+                </p>
+                <p className="text-5xl text-gray-800 leading-tight">
+                    {personalInfo.name}
+                </p>
 
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-violet-500 bg-clip-text text-transparent">
-                {personalInfo.name}
-          </span>
-        </h1>
+                <div className="text-3xl lg:text-3xl font-bold text-blue-500 h-14">
 
-        <div className="text-3xl lg:text-3xl font-bold text-blue-500 h-14">
+                    <span class="text-gray-500">{personalInfo.title[3]}</span>
+                </div>
+            </div>
 
-          {/* <TypeAnimation
-            sequence={[
-              ...personalInfo.title.flatMap((title) => [title, 2000]),
-            ]}
-            wrapper="span"
-            speed={50}
-            repeat={Infinity}
-          /> */}
-            <span class="text-white">{personalInfo.title[3]}</span>
+            {/* Description */}
+
+            <p className="text-gray-400 text-[16px] leading-8 max-w-2xl">
+                {personalInfo.subtitle}
+            </p>
+
+            {/* Buttons */}
+
+            <div className="flex flex-wrap gap-4 ">
+
+                <a
+                    href={personalInfo.resume}
+                    download
+                    className="bg-black hover:bg-black/85 transition px-6 py-3 rounded-full flex items-center gap-2 font-semibold"
+                >
+                    <FaDownload />
+
+                    Resume
+                </a>
+
+
+                {/* <a
+                    href="#projects"
+                    className="border border-blue-500 hover:bg-blue-600 transition px-6 py-4 rounded-xl flex items-center gap-3 font-semibold"
+                >
+                    View Projects
+
+                    <FaArrowRight />
+                </a> */}
+
+            </div>
+
+            <HeroStats />
+
         </div>
-      </div>
-
-      {/* Description */}
-
-      <p className="text-gray-400 text-lg leading-8 max-w-2xl">
-        {personalInfo.subtitle}
-      </p>
-
-      {/* Buttons */}
-
-      <div className="flex flex-wrap gap-4">
-
-        <a
-          href={personalInfo.resume}
-          download
-          className="bg-blue-600 hover:bg-blue-700 transition px-6 py-4 rounded-xl flex items-center gap-3 font-semibold"
-        >
-          <FaDownload />
-
-          Resume
-        </a>
-
-        <a
-          href="#projects"
-          className="border border-blue-500 hover:bg-blue-600 transition px-6 py-4 rounded-xl flex items-center gap-3 font-semibold"
-        >
-          View Projects
-
-          <FaArrowRight />
-        </a>
-
-      </div>
-
-      <HeroStats />
-
-    </div>
-  );
+    );
 };
 
 export default HeroContent;

@@ -17,13 +17,13 @@ const HeroStats = () => {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-5 pt-8">
+    <div className="grid lg:grid-cols-3 gap-5 pt-8">
       {stats.map((item) => (
         <div
           key={item.label}
-          className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-5 text-center"
+          className="bg-gray-50 backdrop-blur-lg shadow-lg rounded-2xl p-5 text-center border border-gray-200 hover:scale-105 transition-transform duration-300 cursor-pointer"
         >
-          <h2 className="text-3xl font-black text-blue-500">
+          <h2 className="text-3xl font-bold! text-violet-600">
             {item.number}
           </h2>
 

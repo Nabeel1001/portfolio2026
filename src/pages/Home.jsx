@@ -4,8 +4,9 @@ import Hero from "../components/Hero/Hero";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
+      
     </>
   );
 };

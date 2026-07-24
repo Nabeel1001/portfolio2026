@@ -1,4 +1,5 @@
 import Container from "../common/Container";
+import { Experience } from "../Experience/Experience";
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
 
@@ -6,13 +7,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center pt-20"
+      className="min-h-screen flex  pt-20"
     >
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 ">
           <HeroContent />
           <HeroImage />
         </div>
+        <Experience />
       </Container>
     </section>
   );
