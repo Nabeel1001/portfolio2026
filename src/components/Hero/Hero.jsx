@@ -14,7 +14,7 @@ const Hero = () => {
           <HeroContent />
           <HeroImage />
         </div>
-        <Experience />
+        {/* <Experience /> */}
       </Container>
     </section>
   );

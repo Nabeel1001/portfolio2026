@@ -6,7 +6,7 @@ export const Experience = () => {
     return (
         <section
             id="experience"
-            className="py-20 pt-10 md:pt-24 px-2"
+            className="py-20 pt-10  px-2"
         >
             <div className="mx-auto max-w">
 
