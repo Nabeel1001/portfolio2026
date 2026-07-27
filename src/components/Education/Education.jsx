@@ -7,7 +7,7 @@ export const Education = () => {
     return (
         <section
             id="education"
-            className="py-20 pt-10  px-2"
+            className="py-16 pt-10  px-2"
         >
             <div className="mx-auto max-w">
                 <div className="flex flex-col items-center justify-center">

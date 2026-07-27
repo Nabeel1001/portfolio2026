@@ -13,7 +13,7 @@ export const ProjectShowcase = ({
 }) => {
   return (
     <section
-      className={`grid items-center gap-16 py-24 ${
+      className={`grid items-center gap-16 py-12 ${
         reverse ? "lg:grid-cols-[1.1fr_0.9fr]" : "lg:grid-cols-[0.9fr_1.1fr]"
       }`}
     >

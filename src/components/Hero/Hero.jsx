@@ -7,14 +7,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex  pt-20"
+      className="sm:mb-20 flex  pt-10 md:pt-20"
     >
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 ">
           <HeroContent />
           <HeroImage />
         </div>
-        {/* <Experience /> */}
       </Container>
     </section>
   );

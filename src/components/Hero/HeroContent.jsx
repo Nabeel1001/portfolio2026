@@ -64,7 +64,9 @@ const HeroContent = () => {
 
             </div>
 
-            <HeroStats />
+            <div className="hidden md:block">
+                <HeroStats />
+            </div>
 
         </div>
     );

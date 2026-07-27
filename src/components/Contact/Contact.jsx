@@ -5,13 +5,13 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-5xl px-6 py-24"
+      className="mx-auto max-w-5xl md:px-6 py-12 md:py-12"
     >
       <div className="flex justify-center">
         <SectionHeading title="Contact" />
       </div>
 
-      <div className="mt-16 rounded-[36px] border border-zinc-200 bg-gradient-to-br from-white via-violet-50/30 to-white px-10 py-20 text-center shadow-sm">
+      <div className="mt-8 md:mt-10 rounded-[36px] border border-zinc-200 bg-gradient-to-br from-white via-violet-50/30 to-white px-10 py-20 text-center shadow-sm">
 
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-600">
           Let's Work Together

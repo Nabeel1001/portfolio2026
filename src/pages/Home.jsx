@@ -18,7 +18,6 @@ const Home = () => {
         id="home" className="min-h-screen flex"
       >
         <Container>
-          
           <Experience />
           <Projects />
           <Education />

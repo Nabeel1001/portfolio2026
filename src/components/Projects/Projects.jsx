@@ -5,7 +5,7 @@ export const Projects = () => {
     return (
         <section
             id="projects"
-            className="mx-auto max-w-7xl px-6 py-24"
+            className="mx-auto max-w-7xl md:px-6 py-12 md:py-24"
         >
 
             <div className="flex flex-col items-center justify-center">
