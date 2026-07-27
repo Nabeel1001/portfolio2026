@@ -28,7 +28,7 @@ const HeroContent = () => {
 
                 <div className="text-3xl lg:text-3xl font-bold text-blue-500 h-14">
 
-                    <span class="text-gray-500">{personalInfo.title[3]}</span>
+                    <span className="text-gray-500">{personalInfo.title[3]}</span>
                 </div>
             </div>
 
