@@ -11,7 +11,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
-import { div } from "framer-motion/client";
 // import { SectionHeading } from "../SectionHeading";
 
 const skillCategories = [
@@ -198,7 +197,7 @@ export const NewSkills = () => {
   }, []);
 
   return (
-    <div className="mb-20">
+    <div className="mb-12 lg:mb-20">
 
 
       <section id="skills" className="py-16">
@@ -214,9 +213,9 @@ export const NewSkills = () => {
                 onClick={handlePrevious}
                 aria-label="Previous skill category"
                 disabled={activeIndex === 0}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/80 text-zinc-900 shadow-lg backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-700/50 dark:bg-zinc-900/70 dark:text-white"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border theme-border theme-surface text-zinc-900 shadow-lg backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 dark:text-white"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={20} className="text-zinc-900" />
               </button>
             </div>
 
@@ -226,13 +225,13 @@ export const NewSkills = () => {
                 onClick={handleNext}
                 aria-label="Next skill category"
                 disabled={activeIndex === skillCategories.length - 1}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/80 text-zinc-900 shadow-lg backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-700/50 dark:bg-zinc-900/70 dark:text-white"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border theme-border theme-surface text-zinc-900 shadow-lg backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 dark:text-white"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={20} className="text-zinc-900"/>
               </button>
             </div>
 
-            <div className="relative mx-auto w-full max-w-180 px-2 pt-8 pb-20 sm:px-4 sm:pb-16 min-h-[420px] sm:min-h-[360px] overflow-visible">
+            <div className="relative mx-auto w-full max-w-180 px-2 pt-8 pb-20 sm:px-4 sm:pb-16 min-h-105 sm:min-h-90 overflow-visible">
               {skillCategories.map((category, index) => {
                 const position =
                   index === activeIndex ? "current" :
@@ -275,19 +274,21 @@ export const NewSkills = () => {
                       whileTap={isActive ? { scale: 0.99 } : undefined}
                       animate={{ rotate: isActive ? dragRotation : 0 }}
                       transition={springConfig}
-                      className="relative cursor-grab rounded-4xl border border-white/20 bg-white/80 p-8 shadow-2xl shadow-zinc-900/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-3xl dark:border-zinc-700/60 dark:bg-zinc-950/70"
+                      className="relative cursor-grab overflow-hidden rounded-4xl border theme-border theme-surface p-8 shadow-xl shadow-zinc-900/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
                     >
-                      <div className="absolute inset-0 bg-linear-to-br from-white/70 via-white/10 to-transparent opacity-90 mix-blend-screen" />
+                      <div className="absolute inset-0 theme-surface-gradient opacity-40" />
+                      <div className="absolute -top-12 -right-12 h-36 w-36 rounded-full theme-primary-soft-bg blur-3xl" />
+                      <div className="absolute -bottom-14 -left-10 h-36 w-36 rounded-full theme-secondary-soft-bg blur-3xl" />
                       <div className="relative flex flex-col gap-6">
-                        <div className="flex items-center gap-3 text-zinc-900 dark:text-white">
-                          <span className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[rgba(37,99,235,0.12)] text-(--primary) shadow-sm shadow-[rgba(37,99,235,0.15)] dark:bg-[rgba(37,99,235,0.12)]">
+                        <div className="flex items-center gap-3 text-zinc-900">
+                          <span className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[rgba(37,99,235,0.12)] text-(--primary) shadow-sm shadow-[rgba(37,99,235,0.15)]">
                             <CardIcon size={24} />
                           </span>
                           <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-400">
+                            {/* <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">
                               Category
-                            </p>
-                            <h3 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white">
+                            </p> */}
+                            <h3 className="text-3xl font-semibold tracking-tight theme-primary">
                               {category.title}
                             </h3>
                           </div>
@@ -297,7 +298,7 @@ export const NewSkills = () => {
                           {category.skills.map((skill) => (
                             <span
                               key={skill}
-                              className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white/80 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-[rgba(37,99,235,0.08)] hover:text-zinc-900 dark:border-zinc-700/70 dark:bg-zinc-900/70 dark:text-zinc-200"
+                              className="inline-flex items-center justify-center rounded-full border theme-border bg-white/90 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:theme-primary-soft-bg hover:theme-primary"
                             >
                               {skill}
                             </span>
