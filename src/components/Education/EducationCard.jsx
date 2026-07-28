@@ -8,16 +8,16 @@ export const EducationCard = ({
   coursework = [],
 }) => {
   return (
-    <div className="relative mx-auto max-w-3xl overflow-hidden rounded-[32px] border border-violet-100 bg-gradient-to-br from-white via-violet-50/40 to-white p-10 shadow-lg">
+    <div className="relative mx-auto max-w-3xl overflow-hidden rounded-[32px] border theme-border theme-surface-gradient p-10 shadow-lg">
 
       {/* Decorative */}
-      <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-violet-500/10 blur-3xl"></div>
-      <div className="absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl"></div>
+      <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full theme-primary-soft-bg blur-3xl"></div>
+      <div className="absolute -bottom-20 -left-20 h-48 w-48 rounded-full theme-secondary-soft-bg blur-3xl"></div>
 
       <div className="relative">
 
         {/* Icon */}
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 text-white shadow-xl">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full theme-accent-gradient text-white shadow-xl">
           <FiBookOpen size={34} />
         </div>
 
@@ -26,7 +26,7 @@ export const EducationCard = ({
           {degree}
         </h2>
 
-        <p className="mt-2 text-center text-lg font-medium text-violet-600">
+        <p className="mt-2 text-center text-lg font-medium theme-primary">
           {college}
         </p>
 
@@ -34,14 +34,14 @@ export const EducationCard = ({
         <div className="mt-8 flex flex-wrap justify-center gap-4">
 
           <div className="flex items-center gap-2 rounded-full bg-white px-5 py-3 shadow-sm text-gray-800">
-            <FiCalendar className="text-violet-600" />
+            <FiCalendar className="theme-primary" />
             <span>{duration}</span>
           </div>
 
-          <div className="flex items-center gap-2 rounded-full bg-white px-5 py-3 shadow-sm text-gray-800">
+          {/* <div className="flex items-center gap-2 rounded-full bg-white px-5 py-3 shadow-sm text-gray-800">
             <FiAward className="text-violet-600" />
             <span>{grade}</span>
-          </div>
+          </div> */}
 
         </div>
 

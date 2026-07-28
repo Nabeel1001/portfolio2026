@@ -22,6 +22,8 @@ const skills = [
     { name: "RAG", category: "AI" },
     { name: "Whisper", category: "AI" },
     { name: "ElevenLabs", category: "AI" },
+    { name: "LiveKit.io", category: "AI" },
+
 
     // Backend
     { name: ".NET", category: "Backend" },
@@ -29,6 +31,7 @@ const skills = [
     { name: "C#", category: "Backend" },
     { name: "Web API", category: "Backend" },
     { name: "Entity Framework", category: "Backend" },
+
 
     // Frontend
     { name: "Angular", category: "Frontend" },
@@ -45,6 +48,7 @@ const skills = [
     // Database
     { name: "SQL Server", category: "Database" },
     { name: "Supabase", category: "Database" },
+    { name: "PostgreSQL", category: "Database" },
 
     // Tools
     { name: "Git", category: "Tools" },
@@ -63,7 +67,7 @@ export const Skills = () => {
     return (
         <section
             id="skills"
-            className="mx-auto max-w-7xl px-6 py-12 md:py-24"
+            className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-6 py-12 md:py-24"
         >
             <div className="flex justify-center">
                 <SectionHeading
@@ -73,20 +77,21 @@ export const Skills = () => {
             </div>
 
             {/* Filters */}
-            <div className="mt-12 flex flex-wrap justify-center gap-3">
-                {categories.map((category) => (
-                    <button
-                        key={category}
-                        onClick={() => setActive(category)}
-                        className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300
-              ${active === category
-                                ? "bg-violet-600 text-white shadow-lg"
-                                : "border border-zinc-200 bg-white text-zinc-600 hover:border-violet-300 hover:text-violet-600"
-                            }`}
-                    >
-                        {category}
-                    </button>
-                ))}
+            <div className="mt-12 flex justify-center">
+                <div className="inline-flex rounded-2xl border border-zinc-200 bg-zinc-100 p-1">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActive(category)}
+                            className={`rounded-xl px-6 py-2.5 text-sm font-semibold transition-all duration-300 ${active === category
+                                    ? "bg-white theme-primary shadow-sm"
+                                    : "text-zinc-500 hover:text-zinc-900"
+                                }`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
             </div>
 
             {/* Skills */}
@@ -111,9 +116,9 @@ export const Skills = () => {
                                 y: -6,
                                 scale: 1.05,
                             }}
-                            className="group cursor-default rounded-2xl border border-zinc-200 bg-white px-6 py-4 shadow-sm transition-all hover:border-violet-300 hover:shadow-lg"
+                            className="group cursor-default rounded-2xl border theme-border bg-white px-6 py-4 shadow-sm transition-all hover:border-[color:var(--primary)] hover:shadow-lg"
                         >
-                            <p className="font-medium text-zinc-800 transition group-hover:text-violet-700">
+                            <p className="font-medium text-zinc-800 transition group-hover:theme-primary">
                                 {skill.name}
                             </p>
                         </motion.div>

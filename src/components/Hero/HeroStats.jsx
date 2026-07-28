@@ -21,9 +21,9 @@ const HeroStats = () => {
       {stats.map((item) => (
         <div
           key={item.label}
-          className="bg-gray-50 backdrop-blur-lg shadow-lg rounded-2xl p-5 text-center border border-gray-200 hover:scale-105 transition-transform duration-300 cursor-pointer"
+          className="theme-surface-muted cursor-pointer rounded-2xl border theme-border p-5 text-center shadow-lg backdrop-blur-lg transition-transform duration-300 hover:scale-105"
         >
-          <h2 className="text-3xl font-bold! text-violet-600">
+          <h2 className="text-3xl font-bold! theme-primary">
             {item.number}
           </h2>
 

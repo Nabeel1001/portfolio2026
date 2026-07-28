@@ -1,12 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712;
-  --card: #111827;
-  --primary: #2563EB;
-  --secondary: #7C3AED;
-  --text: #F9FAFB;
-  --muted: #94A3B8;
+  --background: #fafafa;
+  --surface: #ffffff;
+  --surface-muted: #f5f5f5;
+
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: rgba(37, 99, 235, .10);
+
+  --secondary: #94a3b8;
+  --secondary-soft: rgba(148, 163, 184, .10);
+  --online: rgb(0, 208, 255);
+  --text: #111827;
+  --text-muted: #6b7280;
+
+  --border: #e5e7eb;
+  --border-strong: #93c5fd;
 }
 
 html {
@@ -14,15 +24,87 @@ html {
 }
 
 body {
-  /* background: var(--background); */
+  background: var(--background);
   color: var(--text);
-  /* font-family: "Inter", sans-serif; */
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+
+@layer utilities {
+  .theme-primary {
+    color: var(--primary);
+  }
+
+  .theme-primary-bg {
+    background-color: var(--primary);
+  }
+
+  .theme-primary-bg-hover:hover {
+    background-color: var(--primary-dark);
+  }
+
+  .theme-primary-soft-bg {
+    background-color: var(--primary-soft);
+  }
+
+  .theme-secondary {
+    color: var(--secondary);
+  }
+
+  .theme-secondary-soft-bg {
+    background-color: var(--secondary-soft);
+  }
+
+  .theme-surface {
+    background-color: var(--surface);
+  }
+
+  .theme-surface-muted {
+    background-color: var(--surface-muted);
+  }
+
+  .theme-text-muted {
+    color: var(--text-muted);
+  }
+
+  .theme-border {
+    border-color: var(--border);
+  }
+
+  .theme-border-strong {
+    border-color: var(--border-strong);
+  }
+
+  .theme-surface-gradient {
+    background-image: linear-gradient(135deg, var(--primary-soft) 0%, var(--surface) 50%, var(--secondary-soft) 100%);
+  }
+
+  .theme-accent-gradient {
+    background-image: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+
+  .theme-resume-btn {
+    background-color: var(--text);
+  }
+
+  .theme-resume-btn:hover {
+    background-color: var(--primary);
+  }
+  .theme-online {
+    background-color: var(--online);
+  }
+  .theme-online-text {
+    color: var(--online);
+  }
+
+}
+
 @keyframes blink {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.4;
   }

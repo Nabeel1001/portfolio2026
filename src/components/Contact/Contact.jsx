@@ -5,15 +5,15 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-5xl md:px-6 py-12 md:py-12"
+      className="mx-auto w-full max-w-5xl px-4 sm:px-6 md:px-6 py-12 md:py-12"
     >
       <div className="flex justify-center">
         <SectionHeading title="Contact" />
       </div>
 
-      <div className="mt-8 md:mt-10 rounded-[36px] border border-zinc-200 bg-gradient-to-br from-white via-violet-50/30 to-white px-10 py-20 text-center shadow-sm">
+      <div className="mt-8 md:mt-10 rounded-[36px] border theme-border theme-surface-gradient px-10 py-20 text-center shadow-sm">
 
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-600">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] theme-primary">
           Let's Work Together
         </p>
 
@@ -31,7 +31,7 @@ export const Contact = () => {
 
         <a
           href="mailto:nabeelk60100@gmail.com?subject=Let's%20Work%20Together"
-          className="group mt-12 inline-flex items-center gap-3 rounded-full bg-violet-600 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-violet-700 hover:shadow-xl"
+          className="group mt-12 inline-flex items-center gap-3 rounded-full theme-primary-bg px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 theme-primary-bg-hover hover:shadow-xl"
         >
           <HiOutlineEnvelope className="text-xl transition-transform duration-300 group-hover:rotate-6" />
           Say Hello

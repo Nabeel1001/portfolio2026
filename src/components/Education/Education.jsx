@@ -7,9 +7,9 @@ export const Education = () => {
     return (
         <section
             id="education"
-            className="py-16 pt-10  px-2"
+            className="py-16 pt-10 px-2"
         >
-            <div className="mx-auto max-w">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
                     <SectionHeading title="Education" />
 
@@ -18,7 +18,7 @@ export const Education = () => {
                 <div className="relative mt-16">
 
                     {/* Timeline Line */}
-                    <div className="absolute left-0 right-0 top-12 h-[2px] bg-gradient-to-r from-violet-200 via-violet-400 to-violet-200" />
+                    <div className="absolute left-0 right-0 top-12 h-0.5 bg-linear-to-r from-violet-200 via-violet-400 to-violet-200" />
 
                     <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
 
@@ -28,10 +28,9 @@ export const Education = () => {
 
                             <div className="pt-16">
                                 <EducationCard
-                                    degree="Bachelor of Technology"
-                                    college="Anurag Group of Institutions"
-                                    duration="2020 – 2024"
-                                    grade="CGPA: 8.1 / 10"
+                                    degree="Bachelor of Engineering (CSE)"
+                                    college="Lord's Institute of Engineering and Technology"
+                                    duration="2021 – 2024"
                                     coursework={[
                                         "Data Structures",
                                         "Algorithms",
@@ -48,9 +47,9 @@ export const Education = () => {
 
                             <div className="pt-16">
                                 <EducationCard
-                                    degree="Intermediate (MPC)"
-                                    college="Narayana Junior College"
-                                    duration="2018 – 2020"
+                                    degree="Diploma in Computer Engineering"
+                                    college="Quli Qutub Shah Government Polytechnic College"
+                                    duration="2018 – 2021"
                                     grade="94%"
                                     coursework={[
                                         "Mathematics",

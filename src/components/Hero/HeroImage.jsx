@@ -27,7 +27,7 @@ const HeroImage = () => {
                 <div className="mt-6 flex justify-center gap-5">
                     {/* GitHub */}
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/Nabeel1001"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-gray-100 backdrop-blur-lg border border-gray-300 p-4 rounded-full transition-all duration-300 hover:scale-110 hover:bg-gray-900 shadow-xs"
@@ -37,7 +37,7 @@ const HeroImage = () => {
 
                     {/* LinkedIn */}
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://linkedin.com/in/nabeelkhantechsavvy"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-gray-100 backdrop-blur-lg border border-gray-300 p-4 rounded-full transition-all duration-300 hover:scale-110 hover:bg-[#0077B5] shadow-xs"
@@ -47,7 +47,7 @@ const HeroImage = () => {
 
                     {/* Facebook */}
                     <a
-                        href="https://facebook.com/yourusername"
+                        href="https://www.facebook.com/profile.php?id=100057804951401"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-gray-100 backdrop-blur-lg border border-gray-300 p-4 rounded-full transition-all duration-300 hover:scale-110 hover:bg-[#1877F2] shadow-xs"

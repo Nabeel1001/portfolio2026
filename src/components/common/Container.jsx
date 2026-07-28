@@ -2,7 +2,8 @@ const Container = ({ children, className = "" }) => {
   return (
     <div
       className={`
-        max-w-7xl
+        w-full
+        max-w-350
         mx-auto
         px-6
         lg:px-8

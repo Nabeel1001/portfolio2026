@@ -11,7 +11,7 @@ export const Footer = () => {
 
         <div className="flex items-center gap-5">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Nabeel1001"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-500 transition hover:text-violet-600"
@@ -20,7 +20,7 @@ export const Footer = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://linkedin.com/in/nabeelkhantechsavvy"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-500 transition hover:text-violet-600"
@@ -29,7 +29,7 @@ export const Footer = () => {
           </a>
 
           <a
-            href="https://facebook.com/yourprofile"
+            href="https://www.facebook.com/profile.php?id=100057804951401"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-500 transition hover:text-violet-600"

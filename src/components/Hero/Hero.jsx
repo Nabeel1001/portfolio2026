@@ -1,3 +1,5 @@
+import { MotionWrapper } from "../../animations/MotionWrapper";
+import { scaleIn } from "../../animations/varients";
 import Container from "../common/Container";
 import { Experience } from "../Experience/Experience";
 import HeroContent from "./HeroContent";
@@ -11,7 +13,9 @@ const Hero = () => {
     >
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 ">
-          <HeroContent />
+          <MotionWrapper variants={scaleIn}>
+            <HeroContent />
+          </MotionWrapper>
           <HeroImage />
         </div>
       </Container>
