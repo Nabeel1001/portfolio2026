@@ -4,9 +4,9 @@ import { Experience } from "../components/Experience/Experience";
 import Container from "../components/common/Container";
 import { Projects } from "../components/Projects/Projects";
 import { Education } from "../components/Education/Education";
-import { Skills } from "../components/Skills/Skills";
 import { Contact } from "../components/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
+import { NewSkills } from "../components/NewSkills.jsx";
 
 const Home = () => {
   return (
@@ -22,7 +22,8 @@ const Home = () => {
           <Experience />
           <Projects />
           <Education />
-          <Skills />
+          {/* <Skills /> */}
+          <NewSkills />
           <Contact />
           <Footer />
         </Container>
