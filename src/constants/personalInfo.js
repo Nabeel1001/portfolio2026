@@ -27,7 +27,7 @@ const personalInfo = {
 
   linkedin: "https://linkedin.com/in/nabeelkhantechsavvy",
 
-  resume: "/resume.pdf",
+  resume: `${import.meta.env.BASE_URL}resume.pdf`,
 };
 
 export default personalInfo;
