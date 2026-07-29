@@ -1,22 +1,59 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  BrainCircuit,
-  Server,
-  Monitor,
-  Cloud,
-  Database,
-  Wrench,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+  FaBrain,
+  FaServer,
+  FaLaptopCode,
+  FaCloud,
+  FaDatabase,
+  FaTools,
+  FaChevronLeft,
+  FaChevronRight,
+  FaPython,
+  FaReact,
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaDocker,
+  FaAws,
+  FaMicrosoft,
+  FaGitAlt,
+  FaGithub,
+  FaCode,
+  FaChartLine,
+  FaRocket,
+  FaProjectDiagram,
+  FaLayerGroup,
+  FaSearch,
+  FaTerminal,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiVite,
+  SiDotnet,
+  SiSqlite,
+  SiPostgresql,
+  SiSupabase,
+  SiRedis,
+  SiKubernetes,
+  SiTerraform,
+  SiOpenaigym,
+  SiLangchain,
+  SiSwagger,
+  SiPostman,
+  SiFigma,
+  SiDocker,
+  SiGithub,
+} from "react-icons/si";
 import { SectionHeading } from "./SectionHeading";
 // import { SectionHeading } from "../SectionHeading";
 
 const skillCategories = [
   {
     title: "AI",
-    Icon: BrainCircuit,
+    Icon: FaBrain,
     skills: [
       "Python",
       "LangChain",
@@ -30,7 +67,7 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    Icon: Server,
+    Icon: FaServer,
     skills: [
       ".NET",
       "ASP.NET Core",
@@ -38,13 +75,13 @@ const skillCategories = [
       "Web API",
       "Entity Framework",
       "SQL Server",
-      "Azure DevOps",
+      // "Azure DevOps",
       "Docker",
     ],
   },
   {
     title: "Frontend",
-    Icon: Monitor,
+    Icon: FaLaptopCode,
     skills: [
       "React",
       "TypeScript",
@@ -58,26 +95,26 @@ const skillCategories = [
   },
   {
     title: "Cloud",
-    Icon: Cloud,
+    Icon: FaCloud,
     skills: [
       "AWS",
       "Azure",
       "Docker",
-      "Kubernetes",
+      // "Kubernetes",
       "CI/CD",
-      "Serverless",
-      "Terraform",
-      "Monitoring",
+      // "Serverless",
+      // "Terraform",
+      // "Monitoring",
     ],
   },
   {
     title: "Database",
-    Icon: Database,
+    Icon: FaDatabase,
     skills: [
       "SQL Server",
       "PostgreSQL",
       "Supabase",
-      "Redis",
+      // "Redis",
       "Entity Framework",
       "Database Design",
       "Stored Procedures",
@@ -86,19 +123,68 @@ const skillCategories = [
   },
   {
     title: "Tools",
-    Icon: Wrench,
+    Icon: FaTools,
     skills: [
       "Git",
       "GitHub",
       "Postman",
       "Figma",
       "VS Code",
-      "Azure DevOps",
+      // // "Azure DevOps",
       "Swagger",
       "PowerShell",
     ],
   },
 ];
+
+const skillIcons = {
+  Python: { icon: FaPython, color: "#3776AB" },
+  LangChain: { icon: SiLangchain, color: "#2E8555" },
+  LangGraph: { icon: FaProjectDiagram, color: "#8A2BE2" },
+  OpenAI: { icon: SiOpenaigym, color: "#10A37F" },
+  Whisper: { icon: FaSearch, color: "#6366F1" },
+  Pinecone: { icon: FaProjectDiagram, color: "#2563EB" },
+  LiveKit: { icon: FaRocket, color: "#F59E0B" },
+  ElevenLabs: { icon: FaTerminal, color: "#EC4899" },
+  ".NET": { icon: SiDotnet, color: "#512BD4" },
+  "ASP.NET Core": { icon: FaServer, color: "#0078D4" },
+  "C#": { icon: FaCode, color: "#239120" },
+  "Web API": { icon: FaCode, color: "#2563EB" },
+  "Entity Framework": { icon: FaLayerGroup, color: "#7C3AED" },
+  "SQL Server": { icon: FaDatabase, color: "#0078D4" },
+  "Azure DevOps": { icon: FaMicrosoft, color: "#0078D4" },
+  Docker: { icon: SiDocker, color: "#0DB7ED" },
+  React: { icon: FaReact, color: "#61DAFB" },
+  TypeScript: { icon: SiTypescript, color: "#3178C6" },
+  "Tailwind CSS": { icon: SiTailwindcss, color: "#06B6D4" },
+  JavaScript: { icon: FaJs, color: "#F7DF1E" },
+  HTML: { icon: FaHtml5, color: "#E34F26" },
+  CSS: { icon: FaCss3Alt, color: "#1572B6" },
+  "Next.js": { icon: SiNextdotjs, color: "#000000" },
+  Vite: { icon: SiVite, color: "#646CFF" },
+  AWS: { icon: FaAws, color: "#FF9900" },
+  Azure: { icon: FaMicrosoft, color: "#0078D4" },
+  Kubernetes: { icon: SiKubernetes, color: "#326CE5" },
+  "CI/CD": { icon: FaRocket, color: "#10B981" },
+  Serverless: { icon: FaCloud, color: "#8B5CF6" },
+  Terraform: { icon: SiTerraform, color: "#7B42BC" },
+  Monitoring: { icon: FaChartLine, color: "#14B8A6" },
+  PostgreSQL: { icon: SiPostgresql, color: "#336791" },
+  Supabase: { icon: SiSupabase, color: "#3ECF8E" },
+  Redis: { icon: SiRedis, color: "#DC382D" },
+  "Database Design": { icon: FaDatabase, color: "#4F46E5" },
+  "Stored Procedures": { icon: FaCode, color: "#0F766E" },
+  "Data Modeling": { icon: FaProjectDiagram, color: "#F97316" },
+  Git: { icon: FaGitAlt, color: "#F1502F" },
+  GitHub: { icon: SiGithub, color: "#181717" },
+  Postman: { icon: SiPostman, color: "#FF6C37" },
+  Figma: { icon: SiFigma, color: "#F24E1E" },
+  "VS Code": { icon: FaCode, color: "#007ACC" },
+  Swagger: { icon: SiSwagger, color: "#85EA2D" },
+  PowerShell: { icon: FaTerminal, color: "#012456" },
+};
+
+const getSkillIcon = (skill) => skillIcons[skill] || { icon: FaCode, color: "#2563EB" };
 
 const springConfig = {
   type: "spring",
@@ -215,7 +301,7 @@ export const NewSkills = () => {
                 disabled={activeIndex === 0}
                 className="inline-flex h-12 w-12 items-center justify-center rounded-full border theme-border theme-surface text-zinc-900 shadow-lg backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 dark:text-white"
               >
-                <ChevronLeft size={20} className="text-zinc-900" />
+                <FaChevronLeft size={20} className="text-zinc-900" />
               </button>
             </div>
 
@@ -227,7 +313,7 @@ export const NewSkills = () => {
                 disabled={activeIndex === skillCategories.length - 1}
                 className="inline-flex h-12 w-12 items-center justify-center rounded-full border theme-border theme-surface text-zinc-900 shadow-lg backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 dark:text-white"
               >
-                <ChevronRight size={20} className="text-zinc-900"/>
+                <FaChevronRight size={20} className="text-zinc-900"/>
               </button>
             </div>
 
@@ -295,14 +381,20 @@ export const NewSkills = () => {
                         </div>
 
                         <div className="grid gap-3 sm:grid-cols-2">
-                          {category.skills.map((skill) => (
-                            <span
-                              key={skill}
-                              className="inline-flex items-center justify-center rounded-full border theme-border bg-white/90 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:theme-primary-soft-bg hover:theme-primary"
-                            >
-                              {skill}
-                            </span>
-                          ))}
+                          {category.skills.map((skill) => {
+                            const skillMeta = getSkillIcon(skill);
+                            const SkillIcon = skillMeta.icon;
+
+                            return (
+                              <span
+                                key={skill}
+                                className="inline-flex items-center justify-center gap-2 rounded-full border theme-border bg-white/90 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:theme-primary-soft-bg hover:theme-primary"
+                              >
+                                <SkillIcon className="text-base" style={{ color: skillMeta.color }} />
+                                <span>{skill}</span>
+                              </span>
+                            );
+                          })}
                         </div>
                       </div>
                     </motion.div>

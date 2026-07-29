@@ -65,7 +65,7 @@ export const ProjectShowcase = ({
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border theme-border theme-surface px-5 py-2.5 text-sm font-semibold text-zinc-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-(--primary) hover:theme-primary-soft-bg hover:theme-primary hover:shadow-md"
+              className="group inline-flex items-center gap-2 rounded-full border border-zinc-900 bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 hover:shadow-md"
             >
               <FiGithub className="text-base transition-transform duration-300 group-hover:rotate-6" />
               GitHub
